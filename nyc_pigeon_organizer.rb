@@ -5,12 +5,16 @@ def nyc_pigeon_organizer(data)
     data_by_pigeon[item] = {
       color: [],
       gender: [],
-      lives: []}
+      lives: []
+      }
     }
+    
   data.each do |key, value|
      value.each do |attibutes, pigeon_names|
        pigeon_names.each do |name|
          data_by_pigeon[name][key] << attibutes.to_s
        end
      end
+   end
+   return data_by_pigeon
 end
