@@ -10,7 +10,8 @@ def nyc_pigeon_organizer(data)
           data_by_pigeon[name][key] = []
         end
       end
-      data_by_pigeon[name][key] = new_value.t_s
+      data_by_pigeon[name][key] << new_value.t_s
     end
   end
+  data_by_pigeon
 end
